@@ -100,6 +100,12 @@ const Footer = () => {
               <a href="#">Terms of Service</a>
             </div>
           </div>
+          <p style={{ marginTop: '0.9rem', textAlign: 'center' }}>
+            Design and developed by{' '}
+            <a href="https://nexa-solutions.in" target="_blank" rel="noreferrer" style={{ fontWeight: 600 }}>
+              Nexa Solutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>
