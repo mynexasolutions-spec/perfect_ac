@@ -25,9 +25,8 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container" style={{ padding: '0', maxWidth: '100%' }}>
-          <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <img src="/images/perfect-ac-logo.png" alt="Perfect Air Cool Logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
-            <span style={{ fontSize: '1.4rem', fontWeight: '800', color: 'var(--dark-text)' }}>Perfect Air Cool</span>
+          <Link to="/" className="nav-logo" aria-label="Perfect Air Cool home">
+            <img src="/images/perfect-ac-logo.png" alt="Perfect Air Cool Logo" />
           </Link>
 
           <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
