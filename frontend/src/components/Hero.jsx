@@ -52,7 +52,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src="/images/IMG_3208.JPG.jpeg" alt="AC Technician" className="hero-img-main hide-on-mobile" />
+          <img src="/images/IMG_3208.webp" alt="AC Technician" className="hero-img-main hide-on-mobile" />
           
           <div className="mobile-hero-icons-showcase">
              <motion.div 

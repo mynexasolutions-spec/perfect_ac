@@ -10,7 +10,7 @@ const servicesList = [
     desc: 'Expert diagnosis and repair of all AC faults.',
     details: 'Our expert technicians provide comprehensive diagnostics and repairs for all types of AC units, ensuring optimal performance and longevity.',
     points: ['Gas leak detection & fixing', 'Compressor repair', 'PCB repair', 'Fan motor issues'],
-    currentImg: '/images/IMG_3215.JPG.jpeg',
+    currentImg: '/images/IMG_3215.webp',
     icon: <Settings />
   },
   {
@@ -19,7 +19,7 @@ const servicesList = [
     desc: 'Thorough cleaning for better cooling and efficiency.',
     details: 'Professional jet pump cleaning to remove dust and allergens, improving air quality and cooling efficiency significantly.',
     points: ['Indoor/Outdoor unit cleaning', 'Filter cleaning', 'Drain pipe clearing', 'Performance check'],
-    currentImg: '/images/IMG_3213.JPG.jpeg',
+    currentImg: '/images/IMG_3213.webp',
     icon: <Wind />
   },
   {
@@ -28,7 +28,7 @@ const servicesList = [
     desc: 'Detect leaks and refill refrigerant for max cooling.',
     details: 'Complete leak testing followed by precision gas refilling to restore your AC\'s cooling power to factory levels.',
     points: ['Pressure testing', 'Leak repair', 'Original refrigerant', 'Level calibration'],
-    currentImg: '/images/IMG_3214.JPG.jpeg',
+    currentImg: '/images/IMG_3214.webp',
     icon: <Droplet />
   },
   {
@@ -37,7 +37,7 @@ const servicesList = [
     desc: 'Safe and proper installation of Window & Split ACs.',
     details: 'Perfect installation with proper vacuuming and wall mounting to ensure no vibrations and maximum energy efficiency.',
     points: ['Uninstallation service', 'Wall mounting', 'Copper piping setup', 'Electrical wiring'],
-    currentImg: '/images/IMG_3216.JPG.jpeg',
+    currentImg: '/images/IMG_3216.webp',
     icon: <Home />
   },
   {
@@ -46,7 +46,7 @@ const servicesList = [
     desc: 'Affordable AC rentals for homes and offices.',
     details: 'Get top-brand air conditioners on rent at affordable monthly rates with free maintenance and installation.',
     points: ['Zero maintenance cost', 'Free installation', 'Latest models', 'Flexible duration'],
-    currentImg: '/images/IMG_3217.JPG.jpeg',
+    currentImg: '/images/IMG_3217.webp',
     icon: <Thermometer />
   },
   {
@@ -55,7 +55,7 @@ const servicesList = [
     desc: 'Specialized care for ceiling-mounted Cassette ACs.',
     details: 'Expert maintenance for commercial cassette units, focusing on drainage systems and filter deep-cleaning.',
     points: ['Drain pump testing', 'Ceiling grill cleaning', 'Remote troubleshooting', 'Chemical cleaning'],
-    currentImg: '/images/IMG_3218.JPG.jpeg',
+    currentImg: '/images/IMG_3218.webp',
     icon: <Fan />
   },
   {
@@ -64,7 +64,7 @@ const servicesList = [
     desc: 'Commercial level Variable Refrigerant Flow repairs.',
     details: 'Advanced servicing for complex VRF/VRV systems used in multi-story buildings and large commercial spaces.',
     points: ['Ducting audit', 'Control board repair', 'Loop testing', 'Efficiency optimization'],
-    currentImg: '/images/IMG_3210.JPG.jpeg',
+    currentImg: '/images/IMG_3210.webp',
     icon: <Settings />
   },
   {
@@ -73,7 +73,7 @@ const servicesList = [
     desc: 'End-to-end maintenance of industrial Chiller Plants.',
     details: 'Preventive and breakdown maintenance for industrial-grade chiller plants to ensure uninterrupted cooling.',
     points: ['Water chemistry check', 'Tower maintenance', 'Pump servicing', 'Annual AMC'],
-    currentImg: '/images/IMG_3220.JPG.jpeg',
+    currentImg: '/images/IMG_3220.webp',
     icon: <Settings />
   },
   {
@@ -82,7 +82,7 @@ const servicesList = [
     desc: 'Servicing systems that regulate and circulate air.',
     details: 'Regulation and maintenance of air flow units to maintain perfect building temperature and humidity.',
     points: ['Filter replacement', 'Belt adjustment', 'Coil cleaning', 'Motor greasing'],
-    currentImg: '/images/IMG_3208.JPG.jpeg',
+    currentImg: '/images/IMG_3208.webp',
     icon: <Wind />
   },
   {
@@ -91,7 +91,7 @@ const servicesList = [
     desc: 'Commercial and residential water cooler servicing.',
     details: 'Specialized repairs for storage and instant water coolers used in offices, schools, and homes.',
     points: ['Tank cleaning', 'Thermostat repair', 'Gas charging', 'Tap replacement'],
-    currentImg: '/images/IMG_3211.JPG.jpeg',
+    currentImg: '/images/IMG_3211.webp',
     icon: <Droplet />
   },
   {
@@ -100,7 +100,7 @@ const servicesList = [
     desc: 'Get your fridge cooling like new again.',
     details: 'Repairing all single, double door, and side-by-side refrigerators with genuine spare parts.',
     points: ['No cooling fix', 'Defrost issues', 'Door gasket repair', 'Compressor replacement'],
-    currentImg: '/images/IMG_3216.JPG.jpeg',
+    currentImg: '/images/IMG_3216.webp',
     icon: <Thermometer />
   },
   {
@@ -109,7 +109,7 @@ const servicesList = [
     desc: 'Fully automatic and semi-automatic repairs.',
     details: 'On-site repair for front load, top load, and semi-automatic washing machines of all brands.',
     points: ['Drum repair', 'Drain issues', 'Motherboard fix', 'Spin cycle problems'],
-    currentImg: '/images/IMG_3212.JPG.jpeg',
+    currentImg: '/images/IMG_3212.webp',
     icon: <MonitorSmartphone />
   },
 ];

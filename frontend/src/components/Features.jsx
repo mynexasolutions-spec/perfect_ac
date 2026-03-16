@@ -36,7 +36,7 @@ const Features = () => {
       <div className="container">
         <div className="why-choose-split">
           <div className="why-img-side">
-            <img src="/images/IMG_3211.JPG.jpeg" alt="Professional AC Service" />
+            <img src="/images/IMG_3211.webp" alt="Professional AC Service" />
           </div>
           
           <div className="why-text-side">

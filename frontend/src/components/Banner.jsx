@@ -24,7 +24,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="banner-image">
-             <img src="/images/IMG_3211.JPG.jpeg" alt="AC Service Offer" />
+             <img src="/images/IMG_3211.webp" alt="AC Service Offer" />
              {/* Removed badge as requested */}
           </div>
         </div>

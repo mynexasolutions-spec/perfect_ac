@@ -19,7 +19,7 @@ const HowItWorks = () => {
         >
           <div className="step-line"></div>
           <div className="step-img-wrap">
-            <img src="/images/IMG_3215.JPG.jpeg" alt="Book Service" />
+            <img src="/images/IMG_3215.webp" alt="Book Service" />
             <div className="step-number">1</div>
           </div>
           <div className="step-content">
@@ -36,7 +36,7 @@ const HowItWorks = () => {
         >
           <div className="step-line"></div>
           <div className="step-img-wrap">
-            <img src="/images/IMG_3216.JPG.jpeg" alt="Technician Visits" />
+            <img src="/images/IMG_3216.webp" alt="Technician Visits" />
             <div className="step-number">2</div>
           </div>
           <div className="step-content">
@@ -52,7 +52,7 @@ const HowItWorks = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="step-img-wrap">
-            <img src="/images/IMG_3218.JPG.jpeg" alt="Fix and Test" />
+            <img src="/images/IMG_3218.webp" alt="Fix and Test" />
             <div className="step-number">3</div>
           </div>
           <div className="step-content">
