@@ -8,9 +8,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link to="/" className="pb-3 block" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Link to="/" className="pb-3 block" style={{ display: 'inline-flex', alignItems: 'center' }}>
               <img src="/images/perfect-ac-logo.png" alt="Perfect Air Cool Logo" style={{ height: '45px', width: 'auto', objectFit: 'contain' }} />
-              <span className="logo-text">Perfect <span className="text-primary">Air Cool</span></span>
             </Link>
             <p className="footer-desc mt-3">
               Premium air conditioning services in Bareilly. We specialize in repair, installation, and deep cleaning for all major brands.
@@ -93,14 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p>© {new Date().getFullYear()} Perfect Air Cool. All rights reserved.</p>
-            <div className="legal-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-            </div>
-          </div>
-          <p style={{ marginTop: '0.9rem', textAlign: 'center' }}>
+          <p style={{ textAlign: 'center' }}>
             Design and developed by{' '}
             <a href="https://nexa-solutions.in" target="_blank" rel="noreferrer" style={{ fontWeight: 600 }}>
               Nexa Solutions
