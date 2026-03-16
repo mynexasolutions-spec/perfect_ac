@@ -27,7 +27,7 @@ const Booking = () => {
             <h4 className="section-subtitle text-primary">FAST & RELIABLE</h4>
             <h2 className="section-title text-dark">Book Service Online</h2>
             <p className="text-muted text-max-width booking-intro">
-              Schedule an expert visit right now. Our certified technician will reach your location within 2 hours anywhere in Hyderabad.
+              Schedule an expert visit right now. Our certified technician will reach your location within 2 hours anywhere in Bareilly.
             </p>
           </div>
 

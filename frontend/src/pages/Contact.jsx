@@ -42,7 +42,7 @@ const Contact = () => {
             <div className="icon-wrap bg-light-primary"><Phone className="text-primary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Call Us Directly</p>
-              <p className="text-muted">+91-9772134944</p>
+              <p className="text-muted"><a href="tel:9810103844">+91-9810103844</a></p>
             </div>
           </div>
           
@@ -58,7 +58,7 @@ const Contact = () => {
             <div className="icon-wrap bg-light-primary"><MapPin className="text-primary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Our Office</p>
-              <p className="text-muted">Plot 124, Phase-II, Road No. 10,<br/>Banjara Hills, Hyderabad, TS 500034</p>
+              <p className="text-muted">Bareilly, Uttar Pradesh</p>
             </div>
           </div>
         </motion.div>

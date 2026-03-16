@@ -13,7 +13,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="hero-title">
-            Expert <span className="hl">AC Servicing</span> & <span className="hl">Repairs</span> in Hyderabad
+            Expert <span className="hl">AC Servicing</span> & <span className="hl">Repairs</span> in Bareilly
           </h1>
           <p className="hero-desc">
             Professional repair, deep cleaning, gas refilling, and installation for all AC brands. Certified technicians with genuine spare parts at your doorstep.
@@ -21,10 +21,10 @@ const Hero = () => {
 
           <div className="hero-cta-group">
             <div className="cta-row-main">
-              <a href="tel:9772134944" className="btn-hero-call">
-                <Phone size={20} /> Call: 9772134944
+              <a href="tel:9810103844" className="btn-hero-call">
+                <Phone size={20} /> Call: 9810103844
               </a>
-              <a href="https://wa.me/919772134944" className="btn-hero-wa" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919810103844" className="btn-hero-wa" target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={22} className="wa-icon" fill="#22c55e" color="#22c55e" /> WhatsApp
               </a>
             </div>

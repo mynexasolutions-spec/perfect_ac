@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="logo-text">Perfect <span className="text-primary">Air Cool</span></span>
             </Link>
             <p className="footer-desc mt-3">
-              Premium air conditioning services in Hyderabad. We specialize in repair, installation, and deep cleaning for all major brands.
+              Premium air conditioning services in Bareilly. We specialize in repair, installation, and deep cleaning for all major brands.
             </p>
             <div className="social-links mt-4">
               <a href="#" className="social-icon"><Facebook size={20} /></a>
@@ -53,7 +53,7 @@ const Footer = () => {
                   <span className="contact-icon"><Phone size={18} /></span>
                   <div className="contact-text">
                     <span>Call Us</span>
-                    <strong>+91 97721 34944</strong>
+                    <strong><a href="tel:9810103844">+91 9810103844</a></strong>
                   </div>
                 </div>
               </li>
@@ -71,7 +71,7 @@ const Footer = () => {
                   <span className="contact-icon"><MapPin size={18} /></span>
                   <div className="contact-text">
                     <span>Location</span>
-                    <strong>Road No. 10, Banjara Hills, Hyderabad</strong>
+                    <strong>Bareilly, Uttar Pradesh</strong>
                   </div>
                 </div>
               </li>
@@ -81,14 +81,14 @@ const Footer = () => {
 
         <div className="footer-map mt-4">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.917502099046!2d79.46020600000001!3d28.3915596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0068b91a9f0f5%3A0x1d1fe2e4895238a1!2sPERFECT%20AIR%20COOL%20CENTER!5e0!3m2!1sen!2sin!4v1773317967724!5m2!1sen!2sin" 
+            src="https://www.google.com/maps?q=Bareilly%2C%20Uttar%20Pradesh&output=embed" 
             width="100%" 
             height="350" 
             style={{ border: 0, borderRadius: '20px' }} 
             allowFullScreen="" 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            title="Perfect Air Cool Center Location"
+            title="Perfect Air Cool Bareilly Location"
           ></iframe>
         </div>
 

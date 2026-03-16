@@ -22,7 +22,7 @@ const Reviews = () => {
         <div className="text-center padding-bottom-large">
           <h4 className="section-subtitle text-secondary">CUSTOMER REVIEWS</h4>
           <h2 className="section-title text-dark">What Our Customers Say</h2>
-          <p className="text-muted">Trusted by hundreds of households across Hyderabad.</p>
+          <p className="text-muted">Trusted by hundreds of households across Bareilly.</p>
         </div>
       </div>
 

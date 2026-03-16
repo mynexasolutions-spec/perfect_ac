@@ -42,7 +42,7 @@ const Features = () => {
           <div className="why-text-side">
             <h4 className="section-subtitle">WHY CHOOSE US</h4>
             <h2 className="section-title">Your Home Deserves The Best Cooling</h2>
-            <p className="text-muted mb-4">We bring certified expertise, genuine original spare parts, and fast doorstep service to every job in Hyderabad.</p>
+            <p className="text-muted mb-4">We bring certified expertise, genuine original spare parts, and fast doorstep service to every job in Bareilly.</p>
             
             <div className="feature-cards grid-2-sm">
               <motion.div className="f-card" whileHover={{ y: -5 }}>
