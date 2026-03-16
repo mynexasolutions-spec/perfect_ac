@@ -346,7 +346,7 @@ a {
 
 .nav-logo img {
   display: block;
-  height: 64px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
@@ -1986,7 +1986,7 @@ select.form-control {
   }
 
   .nav-logo img {
-    height: 56px;
+    height: 38px;
   }
 
   /* Hero mobile */
@@ -2380,7 +2380,7 @@ select.form-control {
   }
 
   .nav-logo img {
-    height: 52px !important;
+    height: 36px !important;
     width: auto !important;
   }
 
