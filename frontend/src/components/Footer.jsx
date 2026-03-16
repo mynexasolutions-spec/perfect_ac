@@ -8,8 +8,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link to="/" className="pb-3 block">
-              <span className="logo-text">Perfect <span className="text-primary">AC</span></span>
+            <Link to="/" className="pb-3 block" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <img src="/images/perfect-ac-logo.png" alt="Perfect Air Cool Logo" style={{ height: '45px', width: 'auto', objectFit: 'contain' }} />
+              <span className="logo-text">Perfect <span className="text-primary">Air Cool</span></span>
             </Link>
             <p className="footer-desc mt-3">
               Premium air conditioning services in Hyderabad. We specialize in repair, installation, and deep cleaning for all major brands.
@@ -93,7 +94,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>© {new Date().getFullYear()} Perfect AC Services. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Perfect Air Cool. All rights reserved.</p>
             <div className="legal-links">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
