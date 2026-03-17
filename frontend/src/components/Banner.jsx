@@ -19,7 +19,7 @@ const Banner = () => {
             <h2 className="banner-heading">Complete AC Deep Cleaning <br/> Starting @ ₹499</h2>
             <p className="banner-subtext">Book your service today and get a free gas pressure check-up!</p>
             <div className="banner-actions">
-               <Link to="/book" className="btn btn-primary lg">Claim Offer Now</Link>
+              <Link to="/book" className="btn btn-primary lg">Claim Offer Now</Link>
                <span className="banner-visit">Home Visit Only ₹350</span>
             </div>
           </div>

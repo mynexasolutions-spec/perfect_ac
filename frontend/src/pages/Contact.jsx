@@ -50,7 +50,7 @@ const Contact = () => {
             <div className="icon-wrap bg-light-primary"><Phone className="text-primary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Call Us Directly</p>
-              <p className="text-muted"><a href="tel:9540392786">+91-9540392786</a></p>
+              <p className="text-muted"><a href="tel:9810103844">+91-9810103844</a></p>
             </div>
           </div>
           
