@@ -25,6 +25,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
@@ -2455,13 +2459,19 @@ select.form-control {
   }
 
   /* Contact & Booking page on mobile */
+  .contact-page-section {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
   .contact-info,
   .contact-form {
-    padding: 1.5rem !important;
+    padding: 1.2rem !important;
   }
 
   .grid-2.align-start {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .btn.lg {
