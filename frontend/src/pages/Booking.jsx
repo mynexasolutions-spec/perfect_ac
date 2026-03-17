@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import PageTransition from '../components/PageTransition';
+import { openWhatsAppWithMessage } from '../utils/whatsapp';
 
 const servicesOptions = [
   "AC Repair", "AC Service & Deep Cleaning", "AC Gas Refilling",
@@ -15,7 +16,17 @@ const Booking = () => {
   const [booked, setBooked] = useState(false);
 
   const onSubmit = (data) => {
-    console.log("Booking Confirmed:", data);
+    const message = [
+      'Hello Perfect AC, I want to book a service.',
+      '',
+      `Service: ${data.service}`,
+      `Name: ${data.name}`,
+      `Phone: ${data.phone}`,
+      `Address: ${data.address}`,
+      `Issue Details: ${data.details || 'Not provided'}`,
+    ].join('\n');
+
+    openWhatsAppWithMessage(message);
     setBooked(true);
   };
 
@@ -36,7 +47,7 @@ const Booking = () => {
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="booking-success">
                 <div className="success-icon">✓</div>
                 <h3 className="text-dark mb-2">Booking Confirmed!</h3>
-                <p className="text-muted mb-4">Your service request has been logged. Our technician will contact you shortly to confirm the exact location.</p>
+                <p className="text-muted mb-4">WhatsApp is opened with your booking details. Please tap send there to confirm your service request.</p>
                 <button onClick={() => setBooked(false)} className="btn btn-outline">Book Another</button>
               </motion.div>
             ) : (

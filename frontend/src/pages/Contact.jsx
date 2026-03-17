@@ -3,14 +3,22 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import PageTransition from '../components/PageTransition';
+import { openWhatsAppWithMessage } from '../utils/whatsapp';
 
 const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = (data) => {
-    // In a real application, you would send this to the backend
-    console.log(data);
+    const message = [
+      'Hello Perfect AC, I have a query.',
+      '',
+      `Name: ${data.name}`,
+      `Phone: ${data.phone}`,
+      `Query: ${data.message}`,
+    ].join('\n');
+
+    openWhatsAppWithMessage(message);
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -42,7 +50,7 @@ const Contact = () => {
             <div className="icon-wrap bg-light-primary"><Phone className="text-primary"/></div>
             <div>
               <p className="font-bold text-dark mb-2" style={{ fontWeight: '600' }}>Call Us Directly</p>
-              <p className="text-muted"><a href="tel:9810103844">+91-9810103844</a></p>
+              <p className="text-muted"><a href="tel:9540392786">+91-9540392786</a></p>
             </div>
           </div>
           
@@ -72,7 +80,7 @@ const Contact = () => {
           
           {submitted ? (
              <div className="bg-light-primary text-primary" style={{ padding: '20px', borderRadius: '12px', textAlign: 'center', fontWeight: '600' }}>
-               Thank you! Your message has been sent successfully. Our team will contact you shortly.
+               Redirecting to WhatsApp. Please click send in WhatsApp to confirm your message.
              </div>
           ) : (
              <form onSubmit={handleSubmit(onSubmit)}>

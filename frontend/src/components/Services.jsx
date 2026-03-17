@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, Droplet, Home, Thermometer, Wind, MonitorSmartphone, Fan, X, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { openWhatsAppWithMessage } from '../utils/whatsapp';
 
 const servicesList = [
   {
@@ -116,9 +117,16 @@ const servicesList = [
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
+  const [bookingService, setBookingService] = useState(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   useEffect(() => {
-    if (selectedService) {
+    if (selectedService || bookingService) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -126,10 +134,47 @@ const Services = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [selectedService]);
+  }, [selectedService, bookingService]);
 
   const openModal = (svc) => setSelectedService(svc);
   const closeModal = () => setSelectedService(null);
+  const openBookingModal = (svc) => {
+    setBookingService(svc || null);
+    setSelectedService(null);
+    reset({
+      service: svc?.title || '',
+      name: '',
+      phone: '',
+      address: '',
+      details: '',
+    });
+  };
+
+  const closeBookingModal = () => {
+    setBookingService(null);
+    reset({
+      service: '',
+      name: '',
+      phone: '',
+      address: '',
+      details: '',
+    });
+  };
+
+  const onBookingSubmit = (data) => {
+    const message = [
+      'Hello Perfect AC, I want to book a service from the website popup.',
+      '',
+      `Service: ${data.service}`,
+      `Name: ${data.name}`,
+      `Phone: ${data.phone}`,
+      `Address: ${data.address}`,
+      `Issue Details: ${data.details || 'Not provided'}`,
+    ].join('\n');
+
+    openWhatsAppWithMessage(message);
+    closeBookingModal();
+  };
 
   return (
     <section id="services" className="services-section">
@@ -168,7 +213,12 @@ const Services = () => {
                   >
                     Learn More
                   </button>
-                  <Link to="/book" className="btn btn-primary small-btn text-sm">Book Now</Link>
+                  <button
+                    className="btn btn-primary small-btn text-sm"
+                    onClick={() => openBookingModal(svc)}
+                  >
+                    Book Now
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -214,15 +264,110 @@ const Services = () => {
                   </div>
 
                   <div className="modal-footer">
-                    <Link
-                      to="/book"
+                    <button
                       className="btn btn-primary w-full"
-                      onClick={closeModal}
+                      onClick={() => openBookingModal(selectedService)}
                     >
                       Book This Service Now
-                    </Link>
+                    </button>
                   </div>
                 </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {bookingService && (
+          <div className="modal-overlay" onClick={closeBookingModal}>
+            <motion.div
+              className="modal-content glass"
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              style={{ maxWidth: '760px' }}
+            >
+              <button className="modal-close" onClick={closeBookingModal}>
+                <X size={24} />
+              </button>
+
+              <div className="modal-text-side" style={{ paddingTop: '4rem' }}>
+                <h4 className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Quick Booking</h4>
+                <h2 className="modal-title" style={{ marginBottom: '0.6rem' }}>Book Service On WhatsApp</h2>
+                <p className="modal-desc" style={{ marginBottom: '1.5rem' }}>
+                  Fill this booking form and WhatsApp will open with all details prefilled.
+                </p>
+
+                <form onSubmit={handleSubmit(onBookingSubmit)} className="booking-form">
+                  <div className="input-group full-width">
+                    <label className="input-label">Select Service Needed</label>
+                    <select
+                      className="form-control"
+                      {...register('service', { required: 'Please select a service' })}
+                    >
+                      <option value="">-- Choose what needs fixing --</option>
+                      {servicesList.map((service) => (
+                        <option key={service.id} value={service.title}>{service.title}</option>
+                      ))}
+                    </select>
+                    {errors.service && <span className="error-msg">{errors.service.message}</span>}
+                  </div>
+
+                  <div className="input-group">
+                    <label className="input-label">Full Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      {...register('name', { required: 'Name is required' })}
+                      placeholder="e.g. Rahul Sharma"
+                    />
+                    {errors.name && <span className="error-msg">{errors.name.message}</span>}
+                  </div>
+
+                  <div className="input-group">
+                    <label className="input-label">Mobile Number</label>
+                    <input
+                      type="tel"
+                      className="form-control"
+                      {...register('phone', {
+                        required: 'Phone is required',
+                        pattern: { value: /^[0-9]{10}$/, message: '10 digit number only' },
+                      })}
+                      placeholder="Phone Number"
+                    />
+                    {errors.phone && <span className="error-msg">{errors.phone.message}</span>}
+                  </div>
+
+                  <div className="input-group full-width">
+                    <label className="input-label">Complete Address Details</label>
+                    <textarea
+                      className="form-control"
+                      rows="3"
+                      {...register('address', { required: 'Address is required to dispatch technician' })}
+                      placeholder="House No, Street, Area..."
+                    ></textarea>
+                    {errors.address && <span className="error-msg">{errors.address.message}</span>}
+                  </div>
+
+                  <div className="input-group full-width">
+                    <label className="input-label">Specific Issue Details (Optional)</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      {...register('details')}
+                      placeholder="e.g. AC not cooling, making noise..."
+                    />
+                  </div>
+
+                  <div className="form-actions full-width">
+                    <button type="submit" className="btn btn-primary lg booking-submit">
+                      Continue to WhatsApp
+                    </button>
+                  </div>
+                </form>
               </div>
             </motion.div>
           </div>
