@@ -288,7 +288,7 @@ const Services = () => {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              style={{ maxWidth: '760px' }}
+              style={{ maxWidth: '760px', maxHeight: '90vh', overflowY: 'auto', display: 'flex', flexDirection: 'column' }}
             >
               <button className="modal-close" onClick={closeBookingModal}>
                 <X size={24} />
